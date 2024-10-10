@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | FutureHire</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link href="images/logo.png" rel="icon">
-</head>
-<body class="gradient-wrapper">
-      <nav
+    <link href="images/logo.png" rel="icon" />
+  </head>
+  <body class="gradient-wrapper">
+    <nav
       id="navbar"
       class="navbar navbar-expand-lg navbar-light sticky-top fixed-top"
     >
@@ -24,81 +29,113 @@
           <b>FutureHire</b></a
         >
       </div>
-  </nav>
+    </nav>
 
     <div class="container mt-5">
-        <h1>Contact Us</h1>
-        
-        <form id="contactForm" class="mt-4">
-            <div class="mb-3">
-                <label for="name" class="form-label">Full Name*</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email Address*</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
-            </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label"   >Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone number (XXX-XXX-XXXX)">
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Your Message*</label>
-                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type your message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <p class="error mt-3" id="errorMessage"></p>
-        </form>
-        <div class="footer">
-            <p>&copy; 2024 FutureHire. All rights reserved.</p>
+      <h1>Contact Us</h1>
+
+      <form id="contactForm" class="mt-4">
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name*</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+          />
         </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address*</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Your email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            name="phone"
+            placeholder="Your phone number (XXX-XXX-XXXX)"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Message*</label>
+          <textarea
+            class="form-control"
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Type your message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p class="error mt-3" id="errorMessage"></p>
+      </form>
+      <div class="footer">
+        <p>&copy; 2024 FutureHire. All rights reserved.</p>
+      </div>
     </div>
 
     <script>
-        const form = document.getElementById('contactForm');
-        const errorMessage = document.getElementById('errorMessage');
+      const form = document.getElementById("contactForm");
+      const errorMessage = document.getElementById("errorMessage");
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent page reload on form submission
-            
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const message = document.getElementById('message').value.trim();
-            
-            if (!name || !email || !message) {
-                errorMessage.textContent = "Please fill out all required fields.";
-                return;
-            }
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent page reload on form submission
 
-            if (!validateEmail(email)) {
-                errorMessage.textContent = "Please enter a valid email address.";
-                return;
-            }
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-            if (phone && !validatePhoneNumber(phone)) {
-            errorMessage.textContent = "Please enter a valid phone number (XXX-XXX-XXXX).";
-            return;
+        if (!name || !email || !message) {
+          errorMessage.textContent = "Please fill out all required fields.";
+          return;
         }
 
-            errorMessage.textContent = "";
-            alert('Thank you for contacting us! We will get back to you soon.');
-
-            // Reset the form
-            form.reset();
-        });
-
-        function validateEmail(email) {
-            const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            return re.test(email);
+        if (!validateEmail(email)) {
+          errorMessage.textContent = "Please enter a valid email address.";
+          return;
         }
-         // Function to validate phone number in the format XXX-XXX-XXXX
-    function validatePhoneNumber(phone) {
+
+        if (phone && !validatePhoneNumber(phone)) {
+          errorMessage.textContent =
+            "Please enter a valid phone number (XXX-XXX-XXXX).";
+          return;
+        }
+
+        errorMessage.textContent = "";
+        alert("Thank you for contacting us! We will get back to you soon.");
+
+        // Reset the form
+        form.reset();
+      });
+
+      function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return re.test(email);
+      }
+      // Function to validate phone number in the format XXX-XXX-XXXX
+      function validatePhoneNumber(phone) {
         const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
         return phonePattern.test(phone);
-    }
+      }
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2pXdmaS4VnztM+v4Ko3k3PRIO7sYsRaBxawB0CdM3vxTrF8G4FIOxDfXcb" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2pXdmaS4VnztM+v4Ko3k3PRIO7sYsRaBxawB0CdM3vxTrF8G4FIOxDfXcb"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
