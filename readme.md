@@ -54,7 +54,7 @@ Label (label) Provides consistent form field labeling.
 
 Link (a, forgot-password-link) Creates a hyperlink with styling for a "Forgot Password" link.
 
-List-unstyled (<ul class="list-unstyled">)  Removes default list styling, such as bullets or numbers, from the unordered list.
+List-unstyled   Removes default list styling, such as bullets or numbers, from the unordered list.
 
 
 
