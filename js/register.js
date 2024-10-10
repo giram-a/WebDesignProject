@@ -140,6 +140,7 @@ passwordInput.addEventListener("input", function () {
     isSpecialCharValid
   ) {
     conditionsList.style.display = "none";
+    passwordInput.classList.remove("is-invalid");
   }
 });
 
