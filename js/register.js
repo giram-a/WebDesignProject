@@ -154,3 +154,13 @@ conditions.addEventListener("change", function () {
     submit.disabled = true;
   }
 });
+
+let confirmPasswordInput = document.getElementById("confirmPassword");
+
+confirmPasswordInput.addEventListener("keyup", function () {
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    confirmPasswordInput.classList.add("is-invalid");
+  } else {
+    confirmPasswordInput.classList.remove("is-invalid");
+  }
+});
