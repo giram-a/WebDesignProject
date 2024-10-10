@@ -1,9 +1,19 @@
-.card-registration .select-input.form-control[readonly]:not([disabled]) {
-    font-size: 1rem;
-    line-height: 2.15;
-    padding-left: .75em;
-    padding-right: .75em;
-    }
-    .card-registration .select-arrow {
-    top: 13px;
-    }
+.valid-condition {
+    color: green;
+  }
+  .invalid-condition {
+    color: red;
+  }
+
+  #password-conditions {
+    display: none; /* Initially hidden */
+  }
+
+  .gradient-wrapper {
+    transition: background-color 0.5s ease;
+    background: hsla(0, 0%, 100%, 1);
+    background: radial-gradient(circle, hsla(0, 0%, 100%, 1) 54%, hsla(229, 89%, 62%, 1) 100%);
+    background: -moz-radial-gradient(circle, hsla(0, 0%, 100%, 1) 54%, hsla(229, 89%, 62%, 1) 100%);
+    background: -webkit-radial-gradient(circle, hsla(0, 0%, 100%, 1) 54%, hsla(229, 89%, 62%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF", endColorstr="#4766F4", GradientType=1);
+}
