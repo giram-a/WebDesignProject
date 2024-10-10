@@ -4,47 +4,17 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    overflow: hidden;
 }
 
 .container {
+    position: relative;
     max-width: 600px;
     background-color: white;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
-    margin-top: 50px;
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-.error {
-    color: red;
-    font-size: 0.9rem;
-}
-
-.footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #888;
-}body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-}
-
-.container {
-    max-width: 600px;
-    background-color: white;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 50px;
+    top:10vh;
 }
 
 h1 {
@@ -63,7 +33,6 @@ h1 {
     font-size: 0.9rem;
     color: #888;
 }
-
 
 /* Gradient background wrapper */
 .gradient-wrapper {
@@ -77,10 +46,10 @@ h1 {
 }
 
 /* Navbar change on scroll */
-#navbar.scrolled {
+/* #navbar.scrolled {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Extra-bold text */
 .extra-bold {
@@ -89,7 +58,7 @@ h1 {
     font-size: 60px;
 }
 
-/* Responsive Design for smaller screens */
+/* Res`nsive Design for smaller screens */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 40px;
