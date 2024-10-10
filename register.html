@@ -15,6 +15,7 @@
         border-radius: 10px;
       }
     </style>
+    <link rel="stylesheet" href="css/register.css" />
   </head>
   <body>
     <div class="container mt-5">
@@ -58,6 +59,23 @@
                   required
                 />
               </div>
+              <ul id="password-conditions" class="list-unstyled">
+                <li id="length-condition" class="invalid-condition">
+                  At least 8 characters
+                </li>
+                <li id="uppercase-condition" class="invalid-condition">
+                  At least 1 uppercase letter
+                </li>
+                <li id="lowercase-condition" class="invalid-condition">
+                  At least 1 lowercase letter
+                </li>
+                <li id="number-condition" class="invalid-condition">
+                  At least 1 number
+                </li>
+                <li id="special-condition" class="invalid-condition">
+                  At least 1 special character (!@#$%^&*)
+                </li>
+              </ul>
 
               <!-- Confirm Password -->
               <div class="mb-3">
@@ -87,7 +105,13 @@
               <!-- Upload Resume -->
               <div class="mb-3">
                 <label for="resume" class="form-label">Upload Resume</label>
-                <input class="form-control" type="file" id="resume" required />
+                <input
+                  class="form-control"
+                  type="file"
+                  id="resume"
+                  required
+                  accept="application/pdf"
+                />
               </div>
 
               <!-- Terms & Conditions -->
@@ -104,7 +128,7 @@
               </div>
 
               <!-- Submit Button -->
-              <button type="submit" class="btn btn-primary w-100">
+              <button type="submit" class="btn btn-primary w-100" id="submit">
                 Register
               </button>
             </form>
@@ -115,5 +139,6 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/register.js"></script>
   </body>
 </html>
