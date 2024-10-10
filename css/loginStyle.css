@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+    background-color: #e9ecef;
+    font-family: "Quicksand", sans-serif;
+  }
+
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.card {
+    margin-top: 80px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 50px 10px rgb(0 0 0 / 10%);
+}
+
+h3 {
+    margin-bottom: 20px;
+    color: #353535;
+    font-weight: 300;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #495057;
+  }
+
+/*.btn-primary {
+    color: #fff;
+    background-color: #353535;
+    border-color: #353535;
+    margin-top: 20px;
+    position: sticky;
+    top: 20px;;
+}*/
+
+.btn-primary {
+    color: #fff;
+    background-color: #353535;
+    border-color: #353535;
+    margin-top: 20px;
+    position: sticky;
+    top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0d22e2;
+    border-color: #686868;
+}
+
+
+.btn-link {
+    font-weight: 400;
+    color: #686868;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    color: #353535;
+    text-decoration: underline;
+}
+
+img{
+    margin-left: 40%;
+    border-radius: 100%;
+}
+
+.error{
+    color: red;
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .card {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 5px;
+    }
+
+    h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-control {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    label {
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .btn-link {
+        font-size: 14px;
+    }
+
+    /*images {
+        margin-left: 30%;
+        width: 40%;
+        height: auto;
+    }*/
+}
