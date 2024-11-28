@@ -4,6 +4,7 @@ function validateForm() {
 
   var emailValid = validateEmail(email);
   var passwordValid = validatePassword(password);
+  var passwordValid = validatePassword(password);
 
   document.getElementById("errorFieldEmail").textContent = emailValid
     ? ""
